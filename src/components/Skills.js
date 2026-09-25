@@ -19,7 +19,7 @@ function Skills() {
           <span className="section-tag">My Abilities</span>
           <h2 className="section-title">Skills Overview</h2>
           <p className="section-subtitle">
-            An honest overview of what I know and what I am actively learning right now.
+            An overview of what I know and what I am actively learning right now~
           </p>
         </div>
 

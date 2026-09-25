@@ -11,21 +11,24 @@ function Contact() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) return;
+    
     setFormSubmitted(true);
+    setFormData({ name: '', email: '', message: '' });
+    
     setTimeout(() => {
-      setFormData({ name: '', email: '', message: '' });
-    }, 400);
+      setFormSubmitted(false);
+    }, 5000);
   };
 
   return (
     <section id="contact" className="section">
       <div className="container contact-container-inner">
         <div className="section-header">
-          <span className="section-tag">Get in Touch</span>
+          <span className="section-tag">Say Hello</span>
           <h2 className="section-title">Let's Connect</h2>
           <p className="section-subtitle">
-            I'm currently learning, experimenting and building my way into web development.
+            Have a question, some feedback on my work, or just want to talk about tech? Feel free to reach out anytime.
           </p>
         </div>
 
@@ -61,7 +64,7 @@ function Contact() {
           {formSubmitted && (
             <div className="form-submit-alert">
               <img src="/images/icons/check.svg" alt="Success" />
-              <span>Thanks for reaching out! Your message was submitted.</span>
+              <span>Thanks for reaching out! I've received your note and will get back to you soon.</span>
             </div>
           )}
 
@@ -73,7 +76,7 @@ function Contact() {
                 type="text"
                 name="name"
                 required
-                placeholder="Your Name"
+                placeholder="What's your name?"
                 value={formData.name}
                 onChange={handleInputChange}
               />
@@ -86,7 +89,7 @@ function Contact() {
                 type="email"
                 name="email"
                 required
-                placeholder="Your Email"
+                placeholder="Where can I reply to you?"
                 value={formData.email}
                 onChange={handleInputChange}
               />
@@ -99,7 +102,8 @@ function Contact() {
               id="message"
               name="message"
               required
-              placeholder="Your message..."
+              rows={4}
+              placeholder="What would you like to say or ask?"
               value={formData.message}
               onChange={handleInputChange}
             ></textarea>

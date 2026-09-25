@@ -3,22 +3,24 @@ import React, { useState } from 'react';
 function Navbar({ isDarkMode, toggleTheme }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const closeMenu = () => setMobileMenuOpen(false);
+
   return (
     <nav className="navbar">
       <div className="container nav-content">
         <a href="#home" className="nav-logo">
           <span className="nav-logo-dot"></span>
-          ANUJ
+          Anuj
         </a>
 
         <div className="nav-right-items">
           <div className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
-            <a href="#home" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Home</a>
-            <a href="#about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>About</a>
-            <a href="#skills" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Skills</a>
-            <a href="#learning" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Learning</a>
-            <a href="#projects" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Projects</a>
-            <a href="#contact" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+            <a href="#home" className="nav-link" onClick={closeMenu}>Home</a>
+            <a href="#about" className="nav-link" onClick={closeMenu}>About</a>
+            <a href="#skills" className="nav-link" onClick={closeMenu}>Skills</a>
+            <a href="#learning" className="nav-link" onClick={closeMenu}>Learning</a>
+            <a href="#projects" className="nav-link" onClick={closeMenu}>Projects</a>
+            <a href="#contact" className="nav-link" onClick={closeMenu}>Contact</a>
           </div>
 
           <button

@@ -5,20 +5,20 @@ function Learning() {
     {
       title: 'MERN Stack',
       icon: '/images/icons/mern.svg',
-      desc: 'Building full-stack web applications with database, server, API routing, and reactive UI.',
+      desc: 'Learning how to build web apps with database, server, APIs, and React frontend.',
       topics: ['MongoDB', 'Express.js', 'React', 'Node.js']
     },
     {
       title: 'AI Development',
       icon: '/images/icons/ai-dev.svg',
-      desc: 'Exploring artificial intelligence capabilities to create smarter, interactive web tools.',
-      topics: ['AI APIs', 'AI Integration', 'Prompt Engineering', 'AI-powered Web Applications']
+      desc: 'Exploring AI tools and APIs to add smart features to web projects.',
+      topics: ['AI APIs', 'Prompt Engineering', 'AI Tools', 'Smart Web Apps']
     },
     {
       title: 'Frontend',
       icon: '/images/icons/frontend.svg',
-      desc: 'Creating accessible, responsive, component-driven user interfaces with modern practices.',
-      topics: ['React', 'JavaScript', 'Responsive UI', 'Component-based development']
+      desc: 'Creating clean, responsive web pages that look good on mobile and desktop.',
+      topics: ['HTML & CSS', 'JavaScript', 'React Basics', 'Responsive Design']
     }
   ];
 
@@ -29,7 +29,7 @@ function Learning() {
           <span className="section-tag">Focus Areas</span>
           <h2 className="section-title">Currently Learning</h2>
           <p className="section-subtitle">
-            A closer look at the key concepts and technologies I am exploring at DUCAT.
+            A simple overview of the technologies I am practicing right now at DUCAT.
           </p>
         </div>
 

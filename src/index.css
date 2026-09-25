@@ -1,21 +1,26 @@
-@import 'lenis/dist/lenis.css';
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  background: transparent;
 }
 
 html {
-  /* Lenis handles high-refresh-rate smooth interpolation dynamically */
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
-}
-
-html.lenis,
-html.lenis body {
-  height: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 body {
@@ -25,8 +30,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  /* Hardware acceleration baseline */
-  transform: translateZ(0);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 #root {
@@ -49,7 +54,8 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: inherit;
   outline: none;
 }
